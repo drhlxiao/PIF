@@ -1,0 +1,32 @@
+/PIF/degrader/distance  10
+#unit cm
+/PIF/collimator/radius  10 
+
+/run/initialize
+/vis/scene/create
+/vis/open OGLSQt
+#/vis/open VRML2FILE  a
+
+/vis/viewer/set/autoRefresh false
+/vis/verbose errors
+/vis/drawVolume
+/vis/viewer/set/viewpointThetaPhi 40 40.
+# Draw coordinate axes:
+/vis/scene/add/axes 0 0 0 10 mm
+# Draw smooth trajectories at end of event, showing trajectory points
+# as markers 2 pixels wide:
+/vis/scene/add/trajectories smooth
+/vis/modeling/trajectories/create/drawByCharge
+# Draw hits at end of event:
+/vis/scene/add/hits
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/default/setDrawStepPts true
+/vis/scene/endOfEventAction accumulate 100
+/vis/viewer/set/autoRefresh true
+/vis/verbose warnings
+
+/gps/particle proton 
+/gps/position 0 0 40 cm
+/gps/direction 0  0 -1
+
+/run/beamOn 100

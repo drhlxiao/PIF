@@ -1,0 +1,7 @@
+/opt/geant4/g4work/PIF/CMakeFiles/install/strip.dir
+/opt/geant4/g4work/PIF/CMakeFiles/install/local.dir
+/opt/geant4/g4work/PIF/CMakeFiles/install.dir
+/opt/geant4/g4work/PIF/CMakeFiles/list_install_components.dir
+/opt/geant4/g4work/PIF/CMakeFiles/rebuild_cache.dir
+/opt/geant4/g4work/PIF/CMakeFiles/edit_cache.dir
+/opt/geant4/g4work/PIF/CMakeFiles/g4PIF.dir
